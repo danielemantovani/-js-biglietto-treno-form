@@ -16,11 +16,22 @@ console.log (cancelBtnElem);
 // - Bottone genera
 processBtnElem.addEventListener ("click", function (){
     // console.log ("Genera")
+
     // - Raccolata dati
+
+    // Inserimento nome
     const nameInputElem = document.getElementById ("user-name"); //object |null
     // console.log(nameInputElem, typeof nameInputElem);
     const nameValue = nameInputElem.value; //string |null
     console.log(nameValue);
+
+    // Inserimento km da percorrere
+    let kmInputElem = document.getElementById ("user-km"); //object |null
+    let kmValue = parseInt (kmInputElem.value);//string |null
+    console.log(kmValue, typeof kmValue);
+
+    // Selezione dell'età
+    const ageInputElem = document.getElementById ("user-age");
 })
 
 // bottone annulla
