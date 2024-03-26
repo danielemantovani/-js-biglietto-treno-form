@@ -27,11 +27,13 @@ processBtnElem.addEventListener ("click", function (){
 
     // Inserimento km da percorrere
     let kmInputElem = document.getElementById ("user-km"); //object |null
-    let kmValue = parseInt (kmInputElem.value);//string |null
+    let kmValue = parseInt (kmInputElem.value);//number |null
     console.log(kmValue, typeof kmValue);
 
     // Selezione dell'età
-    const ageInputElem = document.getElementById ("user-age");
+    const ageInputElem = document.getElementById ("user-age"); //object |null
+    const ageValue = parseInt (ageInputElem.value)//number |null
+    console.log(ageValue, typeof ageValue);
 })
 
 // bottone annulla
@@ -40,34 +42,12 @@ cancelBtnElem.addEventListener ("click", function (){
 })
 
 
-// const ticket = 0.21; //number |null
+// 3. CALCOLO PREZZO DEL BIGLIETTO
 
-// 2. ESECUZIONE LOGICA
+const kmPirce = 0.21; //number |null
 
-// calcolo del prezzo al netto degli sconti
-// const ticketPirce = userKm * ticket
-// console.log(ticketPirce);
-
-// calcolo del prezzo se l'utente ha diritto allo sconto
-// prezzo scontato - (prezzo base * sconto /100)
-
-// let finalPrice = ticketPirce;
-
-// let message = ""
-
-// if (userAge < 19) {
-//     finalPrice = ticketPirce * 0.8;
-//     message = "Hai diritto ad uno sconto under 18 del 20%, il prezzo del tuo biglietto è di €";
-// } else if (userAge > 64) {
-//     finalPrice = ticketPirce * 0.6;
-//     message = "Hai diritto ad uno sconto over 65 del 40%, il prezzo del tuo biglietto è di €";
-// } else {
-//     message = "Il prezzo del tuo biglietto è di €"
-// }
-
-// console.log(finalPrice);
+let ticketPrice = kmValue * 0.21
+console.log(ticketPrice);
 
 
-// 3. OUTPUT
 
-// document.getElementById ("finalPrice").innerHTML =message + finalPrice.toFixed(2);
